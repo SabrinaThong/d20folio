@@ -2,6 +2,13 @@ const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
+var mongoose = require("mongoose");
+var db = require("./models");
+mongoose.connect("mongodb://localhost/D2Folio", { useNewUrlParser: true });
+
+var seeds = require('./charSeeds.json');
+
+seeds.map(character => db.Character.create(character));
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

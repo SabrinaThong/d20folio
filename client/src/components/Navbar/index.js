@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
 import {
   Collapse,
   Navbar,
@@ -33,26 +33,19 @@ export default class NavigationBar extends React.Component {
       <div>
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">
-              D20Folio
-          </NavbarBrand>
+              D20Folio</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink>
-                    <Link to="/home"/>Home
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink>
-                    <Link to="/mychars"/>My Characters
-                </NavLink>
-            </NavItem>
-            <NavItem>
-                <NavLink>
-                    <Link to="/new"/>Add Characters
-                </NavLink>
-            </NavItem>
+                <NavItem>
+                  <Link to='/'> Home </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to='/mychars'> My Characters </Link>
+                </NavItem>
+                <NavItem>
+                  <Link to='/new'> Add New Character </Link>
+                </NavItem>
             </Nav>
           </Collapse>
         </Navbar>

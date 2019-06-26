@@ -1,8 +1,8 @@
 var router = require("express").Router();
 var db = require("../models");
-var seeds = require('../charSeeds.json');
+var seeds = require('../client/src/pages/ViewAllCharacters/charSeeds.json');
 
-router.route('/character')
+router.route('/characters')
     .get((req,res,err) => {
         //get all characters here
         res.json(seeds);

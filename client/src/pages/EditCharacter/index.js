@@ -4,8 +4,8 @@ import API from '../../util/API';
 import {Input, Button, Form, FormGroup, Label, Col, Row, Container, Jumbotron} from 'reactstrap'
 export default class EditCharacter extends React.Component {
     state = {
-        name: "SpongeBob the Wise",
-        imageUrl: "https://vignette.wikia.nocookie.net/p__/images/c/cb/SpongeBob_SquarePants_Render.png/revision/latest?cb=20190120193322&path-prefix=protagonist",
+        name: "",
+        imageUrl: "",
 
         //Stats:
         STR: "10",

@@ -21,6 +21,25 @@ export default class EditCharacter extends React.Component {
             [field] : value
         })
     }
+    clearForm = () => {
+        
+    }
+    submitCharacterCreation = () => {
+        var newChar = {
+            name: this.state.name,
+            imageUrl: this.state.imageUrl,
+    
+            //Stats:
+            STR: this.state.STR,
+            DEX: this.state.DEX,
+            CON: this.state.CON,
+            INT: this.state.INT,
+            WIS: this.state.WIS,
+            CHA: this.state.CHA,
+        }
+        API.createCharacter(newChar)
+            .then(() => this.clearForm())
+    }
     render() {
         return (
             this.props.new? 
